@@ -1,0 +1,18 @@
+% 此文件只能更改参数，不得更改变量名称和随意增删空格、空行、百分号，否则报错，另外路径不能出现中文！
+leafPath = C:\Users\dell\Desktop\All_model\ye_pian_xin % （1）图像样本的完整文件路径
+fileExtension = 'jpg','jpeg','png','bmp','pcx','tiff','gif','hdf','ico','cur','xwd','ras','pbm','pgm','ppm' % （2）读取图片时可以指定图片的后缀名，用单引号('')和逗号(,)分隔，可增删
+excelPath = C:\Users\dell\Desktop\All_model\ye_pian_xin\test.xlsx % （3）图像样本名称与模式的Excel文件完整路径
+xx = 9 % （4）特征个数
+yy = 6 % （5）模式个数
+featureM = feature_maker % （6）所使用的特征提取函数m文件名字（无需带.m）
+conclusionM = conclusion_maker % （7）所使用的结果解释函数m文件名字（无需带.m）
+bpnnTrainRate = 0.7 % （8）神经网络训练数据占总体的比重（剩下的是测试数据）
+hiddenLayer = 5 % （9）隐层数量和节点个数，不同隐层用英文逗号分隔，举例如2隐层分别7节点和8节点，就写做：7,8，这里默认是单隐层5节点
+hiddenCross = tansig % （10）隐层传播函数，此处默认单隐层且使用tansig（tan三角函数），如果是两隐层使用英文逗号分隔，假设全都使用tan，写做：tansig，tansig
+outputCross = purelin % （11）输出层传播函数，此处默认使用purelin（线性），注意输出层有且仅有一层
+learnFunction = trainlm % （12）学习函数，默认使用trainlm（动量下降梯度算法）
+epochs = 10000 % （13）训练目标次数，达到即强制停止训练
+goal = 1e-6 % （14）训练目标精度，达到即停止训练
+lr = 1e-2 % （15）学习速率，每次纠错步进距离
+mc = 0.9 % （16）动量因子，每次动量下降幅度
+show = 50 % （17）间隔多少次数显示在屏幕上一次报告
