@@ -20,4 +20,5 @@
 ，excelPath和leafPath不再赘述，varargin为fileExtension（详见init.txt中说明）  
     * s = conclusionM(y,y_out,bpnnTrainRate)，其中s为模式识别成功率，y为原始特征集合，y_out为仿真后特征集合，bpnnTrainRate详见init.txt  
 6. 配置文件更改完成，记得**保存**后再启动程序，否则无效  
-7. 打开matlab后，按上述方式修改好init.txt后，运行centercode.m即可
+7. ye_pian_xin文件夹内包含115张叶片的图像及其所属模式的Excel表，测试此程序可以参考此文件夹
+8. 打开matlab后，按上述方式修改好init.txt后，运行centercode.m即可
